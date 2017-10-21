@@ -9,7 +9,7 @@ extension Droplet {
         }
 
         get("plaintext") { req in
-            return "Hello, world!"
+            return "This is a test"
         }
 
         // response to requests to /info domain
@@ -18,7 +18,9 @@ extension Droplet {
             return req.description
         }
 
-        get("description") { req in return req.description }
+        get("description") { req 
+            in return req.description 
+        }
         
         try resource("posts", PostController.self)
     }
